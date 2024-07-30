@@ -19,21 +19,3 @@ class StringCalculator
     nums.reject { |n| n > 1000 }.sum
   end
 end
-
-# Test cases
-puts StringCalculator.add("") 
-puts StringCalculator.add("1") 
-puts StringCalculator.add("1,2")
-puts StringCalculator.add("1\n2,3")
-puts StringCalculator.add("//;\n1;2")
-puts StringCalculator.add("//[***]\n1***2***3")
-puts StringCalculator.add("//[*][%]\n1*2%3")
-puts StringCalculator.add("//[**][%%]\n1**2%%3")
-
-begin
-  StringCalculator.add("1,-2,3,-4")
-rescue => e
-  puts e.message
-end
-
-puts StringCalculator.add("1001, 2")
